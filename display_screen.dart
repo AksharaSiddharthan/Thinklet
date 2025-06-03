@@ -89,7 +89,7 @@ class _DisplayScreenState extends State<DisplayScreen> {
                             );
                           },
                           child: Container(
-                            margin: const EdgeInsets.only(bottom: 15,top: 15),
+                            margin: const EdgeInsets.only(bottom: 15,top: 20),
                             padding: const EdgeInsets.all(12),
                             decoration: BoxDecoration(
                               color: Colors.grey.shade300,
