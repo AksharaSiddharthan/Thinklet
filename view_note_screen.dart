@@ -57,7 +57,6 @@ class _ViewNoteScreenState extends State<ViewNoteScreen> {
               height: double.infinity,
             ),
           ),
-
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.all(30),
@@ -65,8 +64,13 @@ class _ViewNoteScreenState extends State<ViewNoteScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   IconButton(
-                      onPressed: () => Navigator.pop(context),
-                      icon: const Icon(Icons.arrow_back_ios_new,size:32,color:Color.fromARGB(223, 110, 104, 152), )),
+                    onPressed: () => Navigator.pop(context),
+                    icon: const Icon(
+                      Icons.arrow_back_ios_new,
+                      size: 32,
+                      color: Color.fromARGB(223, 110, 104, 152),
+                    ),
+                  ),
                   Center(
                     child: Text(
                       "View Note",
@@ -75,7 +79,7 @@ class _ViewNoteScreenState extends State<ViewNoteScreen> {
                   ),
                   const SizedBox(height: 16),
 
-                  
+                  // Title Field
                   TextField(
                     controller: titleController,
                     enabled: isEditing,
@@ -85,30 +89,17 @@ class _ViewNoteScreenState extends State<ViewNoteScreen> {
                       hintStyle: GoogleFonts.lekton(),
                       filled: true,
                       fillColor: Colors.white,
-                      
- border :OutlineInputBorder(
-    borderRadius: BorderRadius.circular(16),
-    borderSide: const BorderSide(color: Colors.white),
-  ),
-
-
-
-
-
-
-
-
-
-
-
-                    
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(16),
+                        borderSide: const BorderSide(color: Colors.white),
+                      ),
                     ),
                   ),
 
                   const SizedBox(height: 16),
 
-                  Expanded(
-                    
+                  // Content Field Container
+                  Flexible(
                     child: Container(
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
@@ -127,14 +118,17 @@ class _ViewNoteScreenState extends State<ViewNoteScreen> {
                       ),
                     ),
                   ),
+
+                  // Spacer to prevent overlap with icons
+                  const SizedBox(height: 70),
                 ],
               ),
             ),
           ),
 
-          // Bottom icon row
+          // Icon row at bottom
           Positioned(
-            bottom: 16,
+            bottom: 12,
             left: 16,
             right: 16,
             child: Row(
@@ -143,10 +137,10 @@ class _ViewNoteScreenState extends State<ViewNoteScreen> {
                 // Edit button
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.blueGrey.shade300,
-                    borderRadius: BorderRadius.circular(24),
+                    color: const Color.fromARGB(223, 110, 104, 152),
+                    borderRadius: BorderRadius.circular(16),
                   ),
-                  padding: const EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(5),
                   margin: const EdgeInsets.symmetric(horizontal: 10),
                   child: IconButton(
                     icon: const Icon(Icons.edit, color: Colors.white),
@@ -159,18 +153,18 @@ class _ViewNoteScreenState extends State<ViewNoteScreen> {
                   ),
                 ),
 
-                // Save button (only visible when editing)
+                // Save button
                 if (isEditing)
                   Container(
                     decoration: BoxDecoration(
-                      color: Colors.blueGrey.shade300,
-                      borderRadius: BorderRadius.circular(24),
+                      color: const Color.fromARGB(223, 110, 104, 152),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    padding: const EdgeInsets.all(12),
-                    margin: const EdgeInsets.symmetric(horizontal: 10),
+                    padding: const EdgeInsets.all(5),
+                    margin: const EdgeInsets.symmetric(horizontal: 5),
                     child: IconButton(
                       icon: const Icon(Icons.save, color: Colors.white),
-                      iconSize: 28,
+                      iconSize: 20,
                       onPressed: saveEdits,
                     ),
                   ),
@@ -178,14 +172,14 @@ class _ViewNoteScreenState extends State<ViewNoteScreen> {
                 // Delete button
                 Container(
                   decoration: BoxDecoration(
-                    color: Colors.blueGrey.shade300,
-                    borderRadius: BorderRadius.circular(24),
+                    color: const Color.fromARGB(223, 110, 104, 152),
+                    borderRadius: BorderRadius.circular(16),
                   ),
-                  padding: const EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(5),
                   margin: const EdgeInsets.symmetric(horizontal: 10),
                   child: IconButton(
                     icon: const Icon(Icons.delete, color: Colors.white),
-                    iconSize: 28,
+                    // iconSize: 28,
                     onPressed: deleteNote,
                   ),
                 ),
