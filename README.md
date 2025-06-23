@@ -5,7 +5,7 @@ A note-taking app
 
 Tech Stack:
 
-Design UI: Figma ( https://www.figma.com/design/CaSEk2u5fS9THIbFCD5Z37/Akshara-Siddharthan-s-team-library?node-id=3311-2&t=baI3LDS4hpZlqwks-1 ) 
+Design UI: Figma  ( https://www.figma.com/design/lRGb5oTWtCtLV9iV8IIQu2/Flutter-Apps?node-id=0-1&t=cfNvlhZQH22vqHa3-1 )
 
 Frontend: Flutter
 
