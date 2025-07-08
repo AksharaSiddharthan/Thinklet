@@ -1,5 +1,5 @@
 # Thinklet
-A note-taking app
+Note-taking app
 
 
 
